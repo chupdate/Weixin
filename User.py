@@ -28,8 +28,8 @@ class getuserinfolist:
     def gettoken(self):
         #appid=input('账号：')
         #password=input('密码：')
-        appid='wxc5f569f772d110ba'
-        appsecret='e3d8c9d17ae5048cedbe88cda878247c'
+        appid=''
+        appsecret=''
         url='https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='+appid+'&secret='+appsecret
         page=urllib.request.urlopen(url)
         result=page.read().decode()
@@ -110,7 +110,7 @@ class getuserinfolist:
 if __name__=='__main__':
     ex_infolist=getuserinfolist()
     #ex_infolist.gettoken()
-    ex_infolist.token='-qsZvaaZLxtzWL-8V2IN7sf7Gx2YP4lHK4R6hvOmAAngH3yWt750acUj9LzjMPCE7lvA2NGSpL2VakCSjfFRawJnjQY7Lh68qZ3CaV1nzjcOKRcAGATPW'
+    ex_infolist.token=''
     ex_infolist.getopenid()
     ex_infolist.getinfolist()
 
