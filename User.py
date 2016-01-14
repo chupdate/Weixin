@@ -35,7 +35,7 @@ class getuserinfolist:
         result=page.read().decode()
         result=json.loads(result)
         self.token=result['access_token']
-        print(self.token)
+        print('token:',self.token)
 
     #获取用户openid
     def getopenid(self):
@@ -109,8 +109,8 @@ class getuserinfolist:
 
 if __name__=='__main__':
     ex_infolist=getuserinfolist()
-    #ex_infolist.gettoken()
-    ex_infolist.token=''
+    ex_infolist.gettoken()
+    #ex_infolist.token=''
     ex_infolist.getopenid()
     ex_infolist.getinfolist()
 
