@@ -14,7 +14,7 @@ if __name__=='__main__':
         dict_old[itemlist[0]]=line
     for line in f_new.readlines():
         itemlist=line.split('\t')
-        dict_new[itemlist[1]]=line
+        dict_new[itemlist[0]]=line
     for key in dict_old:
         if (key not in dict_new) and (key.find('?'))==-1:f_compare.write(dict_old[key])
 
