@@ -26,10 +26,8 @@ class getuserinfolist:
 
     #获取access_token
     def gettoken(self):
-        #appid=input('账号：')
-        #password=input('密码：')
-        appid=''
-        appsecret=''
+        appid=input('AppID：')
+        appsecret=input('AppSecret：')
         url='https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='+appid+'&secret='+appsecret
         page=urllib.request.urlopen(url)
         result=page.read().decode()
@@ -59,7 +57,7 @@ class getuserinfolist:
         result=page.read().decode()
         result=json.loads(result)
         for group in result['groups']:groups[group['id']]=group['name']
-        f=codecs.open('D:\\WeixinResult\\userInfo.txt','w','utf-8')
+        f=codecs.open('D:\\WeixinResult\\userInfo.txt','a','utf-8')
         user_info_list=[]
         wrongidlist=[]
         k=0
@@ -108,6 +106,7 @@ class getuserinfolist:
         f.close()
 
 if __name__=='__main__':
+    #结果保存在'D:\\WeixinResult\\userInfo.txt'
     ex_infolist=getuserinfolist()
     ex_infolist.gettoken()
     #ex_infolist.token=''
