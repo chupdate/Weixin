@@ -57,7 +57,7 @@ class getuserinfolist:
         result=page.read().decode()
         result=json.loads(result)
         for group in result['groups']:groups[group['id']]=group['name']
-        f=codecs.open('D:\\WeixinResult\\userInfo.txt','a','utf-8')
+        f=codecs.open('D:\\WeixinResult\\userInfo.txt','w','utf-8')
         user_info_list=[]
         wrongidlist=[]
         k=0
@@ -108,9 +108,10 @@ class getuserinfolist:
 if __name__=='__main__':
     #结果保存在'D:\\WeixinResult\\userInfo.txt'
     ex_infolist=getuserinfolist()
-    ex_infolist.gettoken()
-    #ex_infolist.token=''
+    #ex_infolist.gettoken()
+    ex_infolist.token='TGdsY1h69EcJZSqJBl6pn5q0b6GRewFaY6MDVOUIgXp6wHSD8p0JwdMeG3_cLOhtIeDKxINB6HPlRgZODAx0upKXXk4jm52doDXebYJ8U7eVWsSQL9UUDMJG4ZUvgq5tLXGaABABNW'
     ex_infolist.getopenid()
+    #输出至D:\\WeixinResult\\userInfo.txt
     ex_infolist.getinfolist()
 
 
