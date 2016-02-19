@@ -108,10 +108,12 @@ class getuserinfolist:
 if __name__=='__main__':
     #结果保存在'D:\\WeixinResult\\userInfo.txt'
     ex_infolist=getuserinfolist()
-    #ex_infolist.gettoken()
+    ex_infolist.gettoken()
+    '''
     ex_infolist.token='TGdsY1h69EcJZSqJBl6pn5q0b6GRewFaY6MDVOUIgXp6wHSD8p0JwdMeG3_cLOhtIeDKxINB6HPlRgZODAx0upKXXk4jm52doDXebYJ8U7eVWsSQL9UUDMJG4ZUvgq5tLXGaABABNW'
     ex_infolist.getopenid()
     #输出至D:\\WeixinResult\\userInfo.txt
     ex_infolist.getinfolist()
+    '''
 
 
